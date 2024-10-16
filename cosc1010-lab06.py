@@ -97,14 +97,14 @@ for char in sorted(character.keys()):
 print("*"*75)
 # Output which letter occurred the most 
 
-most_occurred = "y"
-least_occurred = "x"
+most_occurred = "x"
+least_occurred = "y"
 for key in character.keys():
     if character[key] > character[most_occurred]:
         most_occurred = key
 for key in character.keys():
-    if character[key] > character[least_occurred]:
-        most_occurred = key
+    if character[key] < character[least_occurred]:
+       least_occurred = key
 
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
